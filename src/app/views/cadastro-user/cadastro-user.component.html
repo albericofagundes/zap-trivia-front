@@ -1,1 +1,56 @@
-<p>cadastro-user works!</p>
+<form [formGroup]="formCadastro">
+  <div class="box w-100 mt-4">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="form-group">
+          <label for="nome" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" formControlName="nome" />
+          <input type="hidden" formControlName="tipoEnderecoCorrespondencia" />
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-12">
+        <div class="form-group">
+          <label for="cpf-cnpj" class="form-label">CPF/CNPJ</label>
+          <input
+            mask="CPF_CNPJ"
+            id="cpf-cnpj"
+            name="cpf-cnpj"
+            type="text"
+            class="form-control"
+            formControlName="codigoCliente"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="form-group">
+          <label for="nome-preferivel" class="form-label"
+            >Como gostaria de ser chamado?</label
+          >
+          <input
+            id="nome-preferivel"
+            name="nome-preferivel"
+            type="text"
+            class="form-control"
+            formControlName="nomeUsual"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-12">
+        <div class="form-group">
+          <label for="data" class="form-label">Data de nascimento</label>
+          <input
+            id="date-01"
+            type="text"
+            mask="00/00/0000"
+            class="form-control"
+            placeholder="01/01/2021"
+            formControlName="dataNascimento"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
