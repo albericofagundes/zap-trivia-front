@@ -11,6 +11,7 @@ export class CadastroUserComponent {
   private subscription: Subscription = new Subscription();
 
   public formCadastro: FormGroup;
+  public isDisabled: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.formCadastro = this.formBuilder.group({});
@@ -34,7 +35,13 @@ export class CadastroUserComponent {
       name: [null, [Validators.required]],
       email: [null, Validators.required],
       senha: [null, Validators.required],
-      isAdmin: [null],
+      isAdmin: [false],
     });
+  }
+
+  public atualizarContato() {
+    alert('atualizarContato');
+    const formData = this.formCadastro.value;
+    console.log('formData', formData);
   }
 }
