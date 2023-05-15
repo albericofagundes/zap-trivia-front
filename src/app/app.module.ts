@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { CadastroUserComponent } from './views/cadastro-user/cadastro-user.component';
 import { CadastroAdminComponent } from './views/cadastro-admin/cadastro-admin.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,10 @@ import { CadastroAdminComponent } from './views/cadastro-admin/cadastro-admin.co
     HeaderComponent,
     FooterComponent,
     CadastroUserComponent,
-    CadastroAdminComponent
+    CadastroAdminComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
