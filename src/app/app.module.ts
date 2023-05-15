@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BlankTemplateComponent } from './shared/components/blank-template/blank-template.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { CadastroUserComponent } from './views/cadastro-user/cadastro-user.component';
+import { CadastroAdminComponent } from './views/cadastro-admin/cadastro-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlankTemplateComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CadastroUserComponent,
+    CadastroAdminComponent
   ],
   imports: [
     BrowserModule,
