@@ -31,7 +31,7 @@ export class CadastroUserComponent {
 
   private gerarFormularioDadosPessoais(): void {
     this.formCadastro = this.formBuilder.group({
-      nome: [null, [Validators.required]],
+      name: [null, [Validators.required]],
       email: [null, Validators.required],
       senha: [null, Validators.required],
       isAdmin: [null],
