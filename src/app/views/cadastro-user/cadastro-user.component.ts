@@ -40,7 +40,6 @@ export class CadastroUserComponent {
   }
 
   public atualizarContato() {
-    alert('atualizarContato');
     const formData = this.formCadastro.value;
     console.log('formData', formData);
   }
