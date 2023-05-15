@@ -50,5 +50,19 @@
         </button>
       </form>
     </div>
+
+    <div class="container">
+      <!-- Restante do código HTML -->
+
+      <!-- Adicione este bloco condicional para exibir a mensagem de sucesso -->
+      <div *ngIf="dadosCadastrados" class="alert alert-success mt-3">
+        Dados cadastrados com sucesso!
+      </div>
+
+      <!-- Adicione este bloco condicional para exibir a mensagem de erro -->
+      <div *ngIf="mensagemErro" class="alert alert-danger mt-3">
+        {{ mensagemErro }}
+      </div>
+    </div>
   </div>
 </div>

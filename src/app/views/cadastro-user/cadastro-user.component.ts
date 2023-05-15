@@ -13,6 +13,8 @@ export class CadastroUserComponent {
 
   public formCadastro: FormGroup;
   public isDisabled: boolean = false;
+  public dadosCadastrados: boolean = false;
+  public mensagemErro: string | null = null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,13 +52,15 @@ export class CadastroUserComponent {
     this.subscription = this.cadastroUserService
       .cadastrarUsuario(formData)
       .subscribe(
-        (response) => {},
+        (response) => {
+          console.log('response', response);
+
+          this.dadosCadastrados = true; //
+        },
         (error) => {
-          // setTimeout(() => {
-          //   this.modal.dismissAll();
-          // }, 369);
-          // let msg = error;
-          // this.tratarSnackBarResponse(msg, true);
+          console.error('error', error);
+          this.dadosCadastrados = false; // Reiniciar a flag de sucesso
+          this.mensagemErro = error.error.message;
         }
       );
   }
