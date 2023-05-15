@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { CadastroUserComponent } from './views/cadastro-user/cadastro-user.component';
 import { CadastroAdminComponent } from './views/cadastro-admin/cadastro-admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     CadastroUserComponent,
     CadastroAdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
