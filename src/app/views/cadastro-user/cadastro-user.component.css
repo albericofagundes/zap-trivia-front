@@ -1,0 +1,32 @@
+.container {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+
+.custom-input {
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  font-size: 16px;
+}
+
+.custom-input:focus {
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button {
+  border-radius: 8px;
+  background-color: #ff6f61;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #e85a53;
+}

@@ -1,56 +1,143 @@
-<form [formGroup]="formCadastro">
+<!-- <form [formGroup]="formCadastro">
   <div class="box w-100 mt-4">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-12">
         <div class="form-group">
           <label for="nome" class="form-label">Nome completo</label>
-          <input type="text" class="form-control" formControlName="nome" />
-          <input type="hidden" formControlName="tipoEnderecoCorrespondencia" />
+          <input type="text" class="form-control" formControlName="name" />
+          <input type="hidden" formControlName="isAdmin" />
         </div>
       </div>
 
       <div class="col-lg-2 col-md-6 col-12">
         <div class="form-group">
-          <label for="cpf-cnpj" class="form-label">CPF/CNPJ</label>
+          <label for="email" class="form-label">Email</label>
           <input
-            mask="CPF_CNPJ"
-            id="cpf-cnpj"
-            name="cpf-cnpj"
+            mask="email"
+            id="email"
+            name="email"
             type="text"
             class="form-control"
-            formControlName="codigoCliente"
+            formControlName="email"
           />
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-12">
         <div class="form-group">
-          <label for="nome-preferivel" class="form-label"
-            >Como gostaria de ser chamado?</label
-          >
+          <label for="senha" class="form-label">Senha</label>
           <input
-            id="nome-preferivel"
-            name="nome-preferivel"
+            id="senha"
+            name="senha"
             type="text"
             class="form-control"
-            formControlName="nomeUsual"
-          />
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-6 col-12">
-        <div class="form-group">
-          <label for="data" class="form-label">Data de nascimento</label>
-          <input
-            id="date-01"
-            type="text"
-            mask="00/00/0000"
-            class="form-control"
-            placeholder="01/01/2021"
-            formControlName="dataNascimento"
+            formControlName="senha"
           />
         </div>
       </div>
     </div>
   </div>
-</form>
+</form> -->
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+      <form [formGroup]="formCadastro" class="needs-validation" novalidate>
+        <div class="form-group">
+          <label for="nome" class="form-label">Nome completo</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            mask="email"
+            id="email"
+            name="email"
+            type="text"
+            class="form-control"
+            formControlName="email"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="senha" class="form-label">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            class="form-control"
+            formControlName="senha"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-4">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+      <form [formGroup]="formCadastro" class="needs-validation" novalidate>
+        <div class="form-group">
+          <label for="nome" class="form-label">Nome completo</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            formControlName="name"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            mask="email"
+            id="email"
+            name="email"
+            type="text"
+            class="form-control custom-input"
+            formControlName="email"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="senha" class="form-label">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            class="form-control custom-input"
+            formControlName="senha"
+            required
+          />
+          <div class="invalid-feedback">Campo obrigatório.</div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-block mt-4 custom-button"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
